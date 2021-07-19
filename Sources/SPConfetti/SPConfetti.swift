@@ -47,7 +47,6 @@ public class SPConfetti {
         if shared.view.superview == nil {
             window.addSubview(shared.view)
         }
-        let inset: CGFloat = 16
         shared.view.frame = window.bounds
         shared.view.startAnimating()
     }

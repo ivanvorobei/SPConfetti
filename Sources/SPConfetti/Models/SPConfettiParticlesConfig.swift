@@ -27,6 +27,12 @@ import UIKit
 public struct SPConfettiParticlesConfig {
     
     /**
+     SPConfetti: Fill image with color.
+     If disabled, image will use without any fill color.
+     */
+    public var colored: Bool = true
+    
+    /**
      SPConfetti: Style of particles. Can be custom image.
      */
     public var colors: [UIColor] = [.systemRed, .systemPink, .systemYellow, .systemTeal, .systemBlue, .systemGreen]
