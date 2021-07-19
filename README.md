@@ -1,6 +1,6 @@
-# SPConfetti
-
 <img align="left" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/latest-preview.jpg" width="500"/>
+
+# SPConfetti
 
 A simple solution to show the confetti to the user. Smoothly starts and stops. 
 
