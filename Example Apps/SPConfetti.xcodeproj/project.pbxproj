@@ -96,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				F43F829326578DCA001D9B3D /* App */,
-				F4B96F9A265AC36800A01A29 /* Models */,
 				F43F829A26578DCA001D9B3D /* Scenes */,
 				F43F829C26578DCA001D9B3D /* Info.plist */,
 			);
@@ -135,13 +134,6 @@
 				F43F82B926578F04001D9B3D /* Info.plist */,
 			);
 			path = "tvOS Example";
-			sourceTree = "<group>";
-		};
-		F4B96F9A265AC36800A01A29 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		F4BAA43C2658297300DA5BF7 /* App */ = {

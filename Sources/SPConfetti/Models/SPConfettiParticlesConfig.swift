@@ -62,6 +62,11 @@ public struct SPConfettiParticlesConfig {
     public var spinRange: CGFloat = 2
     
     /**
+     SPConfetti: Default element side size.
+     */
+    public var particleSideSize: CGFloat = 12
+    
+    /**
      SPConfetti: The scale factor.
      */
     public var contentsScale: CGFloat = 0.5

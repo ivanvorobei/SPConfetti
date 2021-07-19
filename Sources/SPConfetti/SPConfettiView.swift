@@ -167,18 +167,21 @@ open class SPConfettiView: UIView {
      Usually call when updating layout, ex. rotation device.
      */
     private func updateEmitterPositionAndSize() {
+        // Inset using for hide appear particles.
+        // With inset it appear out of frame.
+        let inset = particlesConfig.particleSideSize * (particlesConfig.contentsScale + particlesConfig.scaleRange)
         switch animation {
         case .fullWidthToDown:
-            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: .zero)
+            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: -inset)
             emitterLayer?.emitterSize = CGSize(width: frame.size.width, height: .zero)
         case .fullWidthToUp:
-            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: frame.size.height)
+            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: frame.size.height + inset)
             emitterLayer?.emitterSize = CGSize(width: frame.size.width, height: .zero)
         case .centerWidthToDown:
-            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: .zero)
+            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: -inset)
             emitterLayer?.emitterSize = CGSize(width: CGFloat.zero, height: .zero)
         case .centerWidthToUp:
-            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: frame.size.height)
+            emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: frame.size.height + inset)
             emitterLayer?.emitterSize = CGSize(width: CGFloat.zero, height: .zero)
         }
     }
@@ -197,8 +200,8 @@ open class SPConfettiView: UIView {
         cell.velocityRange = particlesConfig.velocityRange
         cell.spin = particlesConfig.spin
         cell.spinRange = particlesConfig.spinRange
-        cell.scaleRange = particlesConfig.scaleRange
         cell.contentsScale = 1 / particlesConfig.contentsScale
+        cell.scaleRange = particlesConfig.scaleRange
         cell.scaleSpeed = particlesConfig.scaleSpeed
         cell.beginTime = CACurrentMediaTime()
         switch self.animation {
@@ -215,7 +218,7 @@ open class SPConfettiView: UIView {
             cell.emissionLongitude = degressToRadians(270)
             cell.emissionRange = degressToRadians(45)
         }
-        cell.contents = particles.image.resize(newWidth: 12).colored(color).cgImage
+        cell.contents = particles.image.resize(newWidth: particlesConfig.particleSideSize).colored(color).cgImage
         cell.color = color.cgColor
         return cell
     }
