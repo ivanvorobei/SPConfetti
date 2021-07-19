@@ -142,17 +142,17 @@ Looks at protocol:
 ```swift
 protocol SPConfettiDelegate: AnyObject {
 
-// Caling when animation start.
-func confettiDidStartAnimating()
+    // Caling when animation start.
+    func confettiDidStartAnimating()
 
-// Caling when animation stop.
-func confettiDidStopAnimating()
+    // Caling when animation stop.
+    func confettiDidStopAnimating()
 
-// Caling when animation end. 
-// May calling after `confettiDidStopAnimating`,
-// becouse after stop emitting particles existing particles
-// still available.
-func confettiDidEndAnimating()
+    // Caling when animation end. 
+    // May calling after `confettiDidStopAnimating`,
+    // becouse after stop emitting particles existing particles
+    // still available.
+    func confettiDidEndAnimating()
 }
 ```
 ## Other Projects
