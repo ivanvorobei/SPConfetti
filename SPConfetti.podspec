@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/SPConfetti/**/*.swift'
   
-  subspec.pod_target_xcconfig = {
+  s.pod_target_xcconfig = {
     "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "SPCONFETTI_COCOAPODS"
   }
     
