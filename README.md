@@ -88,10 +88,10 @@ For change emitter size and direction, use `animation` property. Now available n
 ```swift
 enum SPConfettiAnimation {
 
-case fullWidthToDown
-case fullWidthToUp
-case centerWidthToDown
-case centerWidthToUp
+    case fullWidthToDown
+    case fullWidthToUp
+    case centerWidthToDown
+    case centerWidthToUp
 }
 ```
 
