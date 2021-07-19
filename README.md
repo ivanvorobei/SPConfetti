@@ -1,4 +1,4 @@
-<img align="left" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/latest-preview.jpg" height="400"/>
+<img align="left" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/latest-preview.jpg" height="300"/>
 
 # SPConfetti
 
