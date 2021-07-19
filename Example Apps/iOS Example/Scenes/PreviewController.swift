@@ -146,10 +146,6 @@ class PreviewController: SPDiffableTableController {
             }), menu: nil)
         }
     }
-    
-    private func example() {
-        SPConfettiAnimation
-    }
 }
 
 
