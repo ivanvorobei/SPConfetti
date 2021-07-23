@@ -12,4 +12,5 @@ Here provided ideas or features which will be implemented soon.
 - Fix layout for shared object.
 - Mixed particles.
 - Example App Icon.
+- Preset cracker.
 
