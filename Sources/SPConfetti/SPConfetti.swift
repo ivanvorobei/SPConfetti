@@ -49,6 +49,7 @@ public class SPConfetti {
             window.addSubview(shared.view)
         }
         shared.view.frame = window.bounds
+        shared.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         shared.view.startAnimating()
     }
     

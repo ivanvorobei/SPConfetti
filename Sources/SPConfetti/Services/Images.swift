@@ -1,5 +1,5 @@
 // The MIT License (MIT)
-// Copyright © 2020 Ivan Vorobei (hello@ivanvorobei.by)
+// Copyright © 2021 Ivan Vorobei (hello@ivanvorobei.by)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,8 @@ enum Images {
             return UIImage.init(named: "arc", in: bundle, compatibleWith: nil) ?? UIImage()
         case .heart:
             return UIImage.init(named: "heart", in: bundle, compatibleWith: nil) ?? UIImage()
+        case .circle:
+            return UIImage.init(named: "circle", in: bundle, compatibleWith: nil) ?? UIImage()
         case .polygon:
             return UIImage.init(named: "polygon", in: bundle, compatibleWith: nil) ?? UIImage()
         case .star:

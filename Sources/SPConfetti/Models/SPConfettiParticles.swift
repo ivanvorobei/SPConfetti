@@ -29,6 +29,7 @@ public enum SPConfettiParticles {
     case arc
     case star
     case heart
+    case circle
     case triangle
     case polygon
     case custom(UIImage)
@@ -38,6 +39,7 @@ public enum SPConfettiParticles {
         case .arc: return "arc"
         case .star: return "star"
         case .heart: return "heart"
+        case .circle: return "circle"
         case .triangle: return "triangle"
         case .polygon: return "polygon"
         case .custom(_): return "custom_image"
@@ -49,6 +51,7 @@ public enum SPConfettiParticles {
         case .arc: return "Arc"
         case .star: return "Star"
         case .heart: return "Heart"
+        case .circle: return "Circle"
         case .triangle: return "Triangle"
         case .polygon: return "Polygon"
         case .custom(_): return "Custom Image"

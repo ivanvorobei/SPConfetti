@@ -70,7 +70,7 @@ class PreviewController: SPDiffableTableController {
         view.addSubview(confettiView)
         configureSwitchNavigationBarButtonItem()
         
-        let particles = [SPConfettiParticles.arc, .star, .heart, .triangle, .polygon]
+        let particles = [SPConfettiParticles.arc, .star, .heart, .circle, .triangle, .polygon]
         let particlesSection = SPDiffableSection(
             identifier: "particles",
             header: SPDiffableTextHeaderFooter(text: "Particles"),

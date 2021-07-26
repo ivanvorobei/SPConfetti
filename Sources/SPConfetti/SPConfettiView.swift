@@ -150,7 +150,6 @@ open class SPConfettiView: UIView {
             delegate?.confettiDidStopAnimating?()
             delegate?.confettiDidEndAnimating?()
         }
-        
         emitterLayer = nil
     }
     
@@ -193,7 +192,7 @@ open class SPConfettiView: UIView {
      */
     private func makeEmitterCell(color: UIColor) -> CAEmitterCell {
         let cell = CAEmitterCell()
-        cell.birthRate = particlesConfig.birthRate
+        cell.birthRate = particlesConfig.birthRate / Float(particlesConfig.colors.count)
         cell.lifetime = particlesConfig.lifetime
         cell.lifetimeRange = .zero
         cell.velocity = particlesConfig.velocity

@@ -40,12 +40,12 @@ public struct SPConfettiParticlesConfig {
     /**
      SPConfetti: The number of emitted objects created every second.
      */
-    public var birthRate: Float = 4
+    public var birthRate: Float = 24
     
     /**
      SPConfetti: The lifetime of the cell, in second.
      */
-    public var lifetime: Float = 8
+    public var lifetime: Float = 14
     
     /**
      SPConfetti: The initial velocity of the cell.
