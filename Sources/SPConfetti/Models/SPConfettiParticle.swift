@@ -24,7 +24,7 @@ import UIKit
 /**
  SPConfetti: Particles styles.
  */
-public enum SPConfettiParticles {
+public enum SPConfettiParticle {
     
     case arc
     case star

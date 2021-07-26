@@ -30,14 +30,21 @@ class PreviewController: SPDiffableTableController {
     
     // MARK: - Data
     
-    private var currentParticles: SPConfettiParticles = .arc {
-        willSet {
-            let cell = diffableDataSource?.cell(UITableViewCell.self, for: currentParticles.id)
-            cell?.accessoryType = .none
-        }
+    private var currentParticles: [SPConfettiParticle] = [.arc] {
         didSet {
-            let cell = diffableDataSource?.cell(UITableViewCell.self, for: currentParticles.id)
-            cell?.accessoryType = .checkmark
+            for indexPath in tableView.indexPathsForVisibleRows?.filter({ $0.section == .zero }) ?? [] {
+                if let item = diffableDataSource?.item(for: indexPath) as? SPDiffableTableRow {
+                    if currentParticles.contains(where: { $0.id == item.identifier }) {
+                        let cell = tableView.cellForRow(at: indexPath)
+                        cell?.accessoryType = .checkmark
+                        item.accessoryType = .checkmark
+                    } else {
+                        let cell = tableView.cellForRow(at: indexPath)
+                        cell?.accessoryType = .none
+                        item.accessoryType = .none
+                    }
+                }
+            }
         }
     }
     
@@ -70,7 +77,7 @@ class PreviewController: SPDiffableTableController {
         view.addSubview(confettiView)
         configureSwitchNavigationBarButtonItem()
         
-        let particles = [SPConfettiParticles.arc, .star, .heart, .circle, .triangle, .polygon]
+        let particles = [SPConfettiParticle.arc, .star, .heart, .circle, .triangle, .polygon]
         let particlesSection = SPDiffableSection(
             identifier: "particles",
             header: SPDiffableTextHeaderFooter(text: "Particles"),
@@ -81,11 +88,15 @@ class PreviewController: SPDiffableTableController {
                     text: particle.debugName,
                     detail: nil,
                     icon: particle.image.resize(newWidth: 18).withRenderingMode(.alwaysTemplate),
-                    accessoryType: (particle.id == currentParticles.id) ? .checkmark : .none,
+                    accessoryType: isCheckmarked(particle) ? .checkmark : .none,
                     selectionStyle: .none,
                     action: { [weak self] _ in
                         guard let self = self else { return }
-                        self.currentParticles = particle
+                        if self.isCheckmarked(particle) {
+                            self.currentParticles = self.currentParticles.filter({ $0.id != particle.id })
+                        } else {
+                            self.currentParticles.append(particle)
+                        }
                     })
             })
         )
@@ -145,6 +156,10 @@ class PreviewController: SPDiffableTableController {
                 self.configureSwitchNavigationBarButtonItem()
             }), menu: nil)
         }
+    }
+    
+    private func isCheckmarked(_ particle: SPConfettiParticle) -> Bool {
+        return currentParticles.contains(where: { $0.id == particle.id })
     }
 }
 

@@ -2,7 +2,7 @@
 
 # SPConfetti
 
-A simple solution to show the confetti to the user. Smoothly starts and stops. 
+A simple solution to show the confetti to the user. Smoothly starts and stops. Allow set multiply diffrent particles at once.
 
 <p float="left">
     <a href="https://opensource.ivanvorobei.by/spconfetti/preview">
@@ -10,7 +10,7 @@ A simple solution to show the confetti to the user. Smoothly starts and stops.
     </a>
 </p>
 
-You can change shapes and switch between styles. It is possible to change the size and position of emitter. Ready use arc, star, heart triangle shapes. You can set custom shape with your image.
+You can change shapes and switch between styles. It is possible to change the size and position of emitter. Ready use arc, star, heart triangle shapes. You can set custom shapes with your image.
 
 If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
 
@@ -69,7 +69,7 @@ For easy start confetti animation call this:
 
 ```swift
 // For start animation
-SPConfetti.startAnimating(.centerWidthToDown, particles: .triangle)
+SPConfetti.startAnimating(.centerWidthToDown, particles: [.triangle, .arc])
 
 // For stop animation
 SPConfetti.stopAnimating()
@@ -78,7 +78,7 @@ SPConfetti.stopAnimating()
 If you want stop animation automatically in time, use it:
 
 ```swift
-SPConfetti.startAnimating(.centerWidthToDown, particles: .triangle, duration: 3)
+SPConfetti.startAnimating(.centerWidthToDown, particles: [.triangle, .arc], duration: 3)
 ```
 
 You can manage by view `SPConfettiView` with custom layout if need.
@@ -110,14 +110,15 @@ confettiView.animation = .centerWidthToDown
 You can customise particles style and animation config.
 
 ```swift
-// Available arc, star, heart, triangle and polygon
-confettiView.particles = .star
+// Available arc, star, heart, circle, triangle and polygon.
+// You can set many styles particles.
+confettiView.particles = [.star]
 ```
 
 For set custom image use `custom` case:
 
 ```swift
-confettiView.particles = .custom(yourImage)
+confettiView.particles = [.custom(yourImage)]
 ```
 
 ### Shared Configuration
@@ -126,7 +127,7 @@ You can set global values with configuration object. It will apply for all next 
 
 ```swift
 // For example, available more
-SPConfettiConfiguration.particles = .star
+SPConfettiConfiguration.particles = [.star]
 SPConfettiConfiguration.particlesConfig.colors = [.systemRed, .ssytemBlue]
 ```
 
@@ -172,15 +173,15 @@ I have libraries with native interface and managing permissions. Also available 
 Со сложной задачей помогут в чате.
 
 <p float="left">
-<a href="https://sparrowcode.by/telegram/channel">
-<img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-tutorials.svg">
-</a>
-<a href="https://sparrowcode.by/telegram/libs">
-<img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-libraries.svg">
-</a>
-<a href="https://sparrowcode.by/telegram/chat">
-<img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-chat.svg">
-</a>
+    <a href="https://sparrowcode.by/telegram/channel">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-tutorials.svg">
+    </a>
+    <a href="https://sparrowcode.by/telegram/libs">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-libraries.svg">
+    </a>
+    <a href="https://sparrowcode.by/telegram/chat">
+        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-chat.svg">
+    </a>
 </p>
 
 Видео-туториалы выклыдываю на [YouTube](https://sparrowcode.by/youtube):

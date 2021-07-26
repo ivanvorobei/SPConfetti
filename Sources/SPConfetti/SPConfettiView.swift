@@ -61,7 +61,7 @@ open class SPConfettiView: UIView {
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
      */
-    public init(animation: SPConfettiAnimation, particles: SPConfettiParticles) {
+    public init(animation: SPConfettiAnimation, particles: [SPConfettiParticle]) {
         super.init(frame: .zero)
         self.animation = animation
         self.particles = particles
@@ -93,7 +93,7 @@ open class SPConfettiView: UIView {
     /**
      SPConfetti: Style of particles. You can set custom image.
      */
-    public var particles: SPConfettiParticles = SPConfettiConfiguration.particles
+    public var particles: [SPConfettiParticle] = SPConfettiConfiguration.particles
     
     /**
      SPConfetti: Config of particles.
@@ -118,7 +118,15 @@ open class SPConfettiView: UIView {
         case .centerWidthToUp:
             emitterLayer.emitterShape = CAEmitterLayerEmitterShape.point
         }
-        emitterLayer.emitterCells = particlesConfig.colors.map({ makeEmitterCell(color: $0) })
+        
+        emitterLayer.emitterCells = []
+        for color in particlesConfig.colors {
+            for particle in particles {
+                let cell = makeEmitterCell(particle: particle, color: color)
+                emitterLayer.emitterCells?.append(cell)
+            }
+        }
+        
         layer.addSublayer(emitterLayer)
         emitterLayer.lifetime = 1
         self.emitterLayer = emitterLayer
@@ -168,7 +176,7 @@ open class SPConfettiView: UIView {
     private func updateEmitterPositionAndSize() {
         // Inset using for hide appear particles.
         // With inset it appear out of frame.
-        let inset = particlesConfig.particleSideSize * (particlesConfig.contentsScale + particlesConfig.scaleRange)
+        let inset = particleWidth * (particlesConfig.contentsScale + particlesConfig.scaleRange)
         switch animation {
         case .fullWidthToDown:
             emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: -inset)
@@ -190,9 +198,9 @@ open class SPConfettiView: UIView {
     /**
      SPConfetti: Wrapper of emitter cell generate.
      */
-    private func makeEmitterCell(color: UIColor) -> CAEmitterCell {
+    private func makeEmitterCell(particle: SPConfettiParticle, color: UIColor) -> CAEmitterCell {
         let cell = CAEmitterCell()
-        cell.birthRate = particlesConfig.birthRate / Float(particlesConfig.colors.count)
+        cell.birthRate = particlesConfig.birthRate / Float(particlesConfig.colors.count) / Float(particles.count)
         cell.lifetime = particlesConfig.lifetime
         cell.lifetimeRange = .zero
         cell.velocity = particlesConfig.velocity
@@ -217,13 +225,20 @@ open class SPConfettiView: UIView {
             cell.emissionLongitude = degressToRadians(270)
             cell.emissionRange = degressToRadians(45)
         }
-        var image = particles.image.resize(newWidth: particlesConfig.particleSideSize)
+        var image = particle.image.resize(newWidth: particleWidth)
         if particlesConfig.colored {
             image = image.colored(color)
             cell.color = color.cgColor
         }
         cell.contents = image.cgImage
         return cell
+    }
+    
+    /**
+     SPConfetti: Calculate particle width with parent width and particles factor from config.
+     */
+    private var particleWidth: CGFloat {
+        frame.width * particlesConfig.particleSideSizeFactor
     }
     
     /**

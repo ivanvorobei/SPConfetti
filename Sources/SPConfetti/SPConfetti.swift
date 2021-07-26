@@ -41,7 +41,7 @@ public class SPConfetti {
      - parameter particles: Particles style. Can be custom image.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: SPConfettiParticles) {
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle]) {
         shared.view.animation = animation
         shared.view.particles = particles
         guard let window = UIApplication.shared.keyWindow else { return }
@@ -61,7 +61,7 @@ public class SPConfetti {
      - parameter duration: Automatically stop animation after this time interval.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: SPConfettiParticles, duration: TimeInterval) {
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval) {
         startAnimating(animation, particles: particles)
         delay(duration, closure: {
             stopAnimating()
