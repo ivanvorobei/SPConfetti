@@ -72,7 +72,7 @@ public struct SPConfettiParticlesConfig {
      
      Calculated of parent width.
      */
-    public var particleSideSizeFactor: CGFloat = 0.032
+    public var particleSideSizeFactor: CGFloat = 0.03
     
     /**
      SPConfetti: The scale factor.
