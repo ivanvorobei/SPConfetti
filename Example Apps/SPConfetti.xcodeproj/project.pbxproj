@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F409BE2026AEAFB9002AB784 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409BE1F26AEAFB9002AB784 /* PreviewController.swift */; };
 		F43F829D26578DCA001D9B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43F829426578DCA001D9B3D /* Assets.xcassets */; };
 		F43F829E26578DCA001D9B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F829526578DCA001D9B3D /* LaunchScreen.storyboard */; };
 		F43F829F26578DCA001D9B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F829726578DCA001D9B3D /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F409BE1F26AEAFB9002AB784 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		F43F827B26578D83001D9B3D /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43F829426578DCA001D9B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43F829626578DCA001D9B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F409BE1E26AEAF2C002AB784 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F409BE1F26AEAFB9002AB784 /* PreviewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		F43F827226578D83001D9B3D = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F4BAA43C2658297300DA5BF7 /* App */,
+				F409BE1E26AEAF2C002AB784 /* Scenes */,
 				F43F82B926578F04001D9B3D /* Info.plist */,
 			);
 			path = "tvOS Example";
@@ -268,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F409BE2026AEAFB9002AB784 /* PreviewController.swift in Sources */,
 				F4BAA4422658297300DA5BF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

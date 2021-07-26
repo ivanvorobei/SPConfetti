@@ -41,7 +41,7 @@ public class SPConfettiConfiguration {
     /**
      SPConfetti: Style of particles. You can set custom image.
      */
-    public static var particles: SPConfettiParticles {
+    public static var particles: [SPConfettiParticle] {
         get { shared.particles }
         set { shared.particles = newValue }
     }
@@ -57,7 +57,7 @@ public class SPConfettiConfiguration {
     // MARK: - Internal
     
     private var animation: SPConfettiAnimation = .fullWidthToDown
-    private var particles: SPConfettiParticles = .arc
+    private var particles: [SPConfettiParticle] = [.arc]
     private var particlesConfig = SPConfettiParticlesConfig()
     
     // MARK: - Singltone

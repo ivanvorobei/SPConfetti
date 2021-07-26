@@ -23,7 +23,7 @@ import UIKit
 
 enum Images {
     
-    static func particles_icon(for particles: SPConfettiParticles) -> UIImage {
+    static func particles_icon(for particles: SPConfettiParticle) -> UIImage {
         switch particles {
         case .arc:
             return UIImage.init(named: "arc", in: bundle, compatibleWith: nil) ?? UIImage()
