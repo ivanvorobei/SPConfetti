@@ -128,7 +128,7 @@ You can set global values with configuration object. It will apply for all next 
 ```swift
 // For example, available more
 SPConfettiConfiguration.particles = [.star]
-SPConfettiConfiguration.particlesConfig.colors = [.systemRed, .ssytemBlue]
+SPConfettiConfiguration.particlesConfig.colors = [.systemRed, .sytemBlue]
 ```
 
 ## Delegate
