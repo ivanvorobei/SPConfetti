@@ -99,7 +99,7 @@ enum SPConfettiAnimation {
 }
 ```
 
-For change animation:
+To change animation:
 
 ```swift
 confettiView.animation = .centerWidthToDown
