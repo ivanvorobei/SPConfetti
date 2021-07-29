@@ -141,7 +141,7 @@ open class SPConfettiView: UIView {
     public func stopAnimating(animatable: Bool = true) {
         if animatable {
             emitterLayer?.lifetime = .zero
-            
+            delegate?.confettiDidStopAnimating?(view: self)
             // Clean sublayers which not using already.
             if let time = emitterLayer?.emitterCells?.first?.lifetime {
                 let layerForRemove = self.emitterLayer
