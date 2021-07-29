@@ -37,6 +37,12 @@ open class SPConfettiView: UIView {
     
     public weak var delegate: SPConfettiDelegate?
     
+    /**
+     SPConfetti: If set this flag to true and call stop animation,
+     after end of animation view automatically destroid.
+     */
+    public var destructionWithNextStopAnimation: Bool = false
+    
     // MARK: - Layers
     
     /**
@@ -139,9 +145,17 @@ open class SPConfettiView: UIView {
      - parameter animatable: If animatable particles compelte its way. If none-animatable, particles dissapear at once.
      */
     public func stopAnimating(animatable: Bool = true) {
+        
+        let destryWork = { [weak self] in
+            self?.emitterLayer?.removeFromSuperlayer()
+            self?.removeFromSuperview()
+        }
+        
+        let destroy = self.destructionWithNextStopAnimation
         if animatable {
             emitterLayer?.lifetime = .zero
             delegate?.confettiDidStopAnimating?(view: self)
+            
             // Clean sublayers which not using already.
             if let time = emitterLayer?.emitterCells?.first?.lifetime {
                 let layerForRemove = self.emitterLayer
@@ -149,6 +163,10 @@ open class SPConfettiView: UIView {
                     guard let self = self else { return }
                     layerForRemove?.removeFromSuperlayer()
                     self.delegate?.confettiDidEndAnimating?(view: self)
+                    
+                    if destroy {
+                        destryWork()
+                    }
                 })
             }
             
@@ -157,6 +175,10 @@ open class SPConfettiView: UIView {
             emitterLayer?.removeFromSuperlayer()
             delegate?.confettiDidStopAnimating?(view: self)
             delegate?.confettiDidEndAnimating?(view: self)
+            
+            if destroy {
+                destryWork()
+            }
         }
         emitterLayer = nil
     }
