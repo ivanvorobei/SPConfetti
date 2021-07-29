@@ -104,6 +104,10 @@ open class SPConfettiView: UIView {
      SPConfetti: Start animating with selected animation and particles style.
      */
     public func startAnimating() {
+        if isReleasesParticles {
+            print("SPConfetti - Confetti already releases. Please, call `stopAnimating` func before start new animation. For now this call don't have any effect.")
+            return
+        }
         let emitterLayer = CAEmitterLayer()
         emitterLayer.birthRate = 1
         emitterLayer.lifetime = .zero
