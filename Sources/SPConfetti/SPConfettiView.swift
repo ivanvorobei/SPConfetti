@@ -130,7 +130,7 @@ open class SPConfettiView: UIView {
         layer.addSublayer(emitterLayer)
         emitterLayer.lifetime = 1
         self.emitterLayer = emitterLayer
-        delegate?.confettiDidStartAnimating?()
+        delegate?.confettiDidStartAnimating?(view: self)
     }
     
     /**
@@ -148,15 +148,15 @@ open class SPConfettiView: UIView {
                 delay(TimeInterval(time + 0.5), closure: { [weak self] in
                     guard let self = self else { return }
                     layerForRemove?.removeFromSuperlayer()
-                    self.delegate?.confettiDidEndAnimating?()
+                    self.delegate?.confettiDidEndAnimating?(view: self)
                 })
             }
             
         } else {
             emitterLayer?.lifetime = .zero
             emitterLayer?.removeFromSuperlayer()
-            delegate?.confettiDidStopAnimating?()
-            delegate?.confettiDidEndAnimating?()
+            delegate?.confettiDidStopAnimating?(view: self)
+            delegate?.confettiDidEndAnimating?(view: self)
         }
         emitterLayer = nil
     }

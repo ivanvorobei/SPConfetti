@@ -26,12 +26,12 @@ import UIKit
     /**
      SPConfetti: Caling when animation start.
      */
-    @objc optional func confettiDidStartAnimating()
+    @objc optional func confettiDidStartAnimating(view: SPConfettiView)
     
     /**
      SPConfetti: Caling when animation end.
      */
-    @objc optional func confettiDidStopAnimating()
+    @objc optional func confettiDidStopAnimating(view: SPConfettiView)
     
     /**
      SPConfetti: Caling when animation end.
@@ -39,5 +39,5 @@ import UIKit
      May calling after `confettiDidStopAnimating`,
      becouse after stop emitting particles existing particles still available.
      */
-    @objc optional func confettiDidEndAnimating()
+    @objc optional func confettiDidEndAnimating(view: SPConfettiView)
 }
