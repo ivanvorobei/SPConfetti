@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "SPConfetti",
     platforms: [
-        .iOS(.v12), .tvOS(.v12)
+        .iOS(.v10), .tvOS(.v10)
     ],
     products: [
         .library(
