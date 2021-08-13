@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'SPConfetti'
-  s.version = '1.2.3'
+  s.version = '1.2.4'
   s.summary = 'Show the confetti only when the user is having fun, and if not having fun, dont show it.'
   s.homepage = 'https://github.com/ivanvorobei/SPConfetti'
   s.source = { :git => 'https://github.com/ivanvorobei/SPConfetti.git', :tag => s.version }
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author = { 'Ivan Vorobei' => 'hello@ivanvorobei.by' }
   
   s.swift_version = '5.1'
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '10.0'
   
   s.source_files = 'Sources/SPConfetti/**/*.swift'
 
