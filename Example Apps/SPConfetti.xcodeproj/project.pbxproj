@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		F409BE1F26AEAFB9002AB784 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		F4399E50273022A700168720 /* SPConfetti */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPConfetti; path = ..; sourceTree = "<group>"; };
 		F43F827B26578D83001D9B3D /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43F829426578DCA001D9B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43F829626578DCA001D9B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		F43F829C26578DCA001D9B3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43F82AB26578F03001D9B3D /* tvOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43F82B926578F04001D9B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F46C34C327072610005681BA /* SPConfetti */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPConfetti; path = ..; sourceTree = "<group>"; };
 		F4BAA43D2658297300DA5BF7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4BAA43E2658297300DA5BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4BAA43F2658297300DA5BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		F43F827226578D83001D9B3D = {
 			isa = PBXGroup;
 			children = (
-				F46C34C327072610005681BA /* SPConfetti */,
+				F4399E50273022A700168720 /* SPConfetti */,
 				F43F829226578DCA001D9B3D /* iOS Example */,
 				F43F82AC26578F03001D9B3D /* tvOS Example */,
 				F43F827C26578D83001D9B3D /* Products */,
