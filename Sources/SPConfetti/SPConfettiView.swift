@@ -88,17 +88,17 @@ open class SPConfettiView: UIView {
      
      Change it before start animating.
      */
-    public var animation: SPConfettiAnimation = SPConfettiConfiguration.animation
+    public lazy var animation: SPConfettiAnimation = SPConfettiConfiguration.animation
     
     /**
      SPConfetti: Style of particles. You can set custom image.
      */
-    public var particles: [SPConfettiParticle] = SPConfettiConfiguration.particles
+    public lazy var particles: [SPConfettiParticle] = SPConfettiConfiguration.particles
     
     /**
      SPConfetti: Config of particles.
      */
-    public var particlesConfig = SPConfettiConfiguration.particlesConfig
+    public lazy var particlesConfig = SPConfettiConfiguration.particlesConfig
     
     /**
      SPConfetti: Start animating with selected animation and particles style.
