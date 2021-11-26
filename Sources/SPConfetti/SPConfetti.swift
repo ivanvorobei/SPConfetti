@@ -45,7 +45,9 @@ public class SPConfetti {
         shared.view.animation = animation
         shared.view.particles = particles
         guard let window = UIApplication.shared.keyWindow else { return }
-        if shared.view.superview == nil {
+        if let superview = shared.view.superview {
+            superview.bringSubviewToFront(shared.view)
+        } else {
             window.addSubview(shared.view)
         }
         shared.view.frame = window.bounds
