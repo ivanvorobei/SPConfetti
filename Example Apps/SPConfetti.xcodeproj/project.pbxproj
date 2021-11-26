@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0DF68D1275137BB00740C0F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF68D0275137BB00740C0F /* Main.swift */; };
+		F0DF68D3275137BB00740C0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF68D2275137BB00740C0F /* ContentView.swift */; };
+		F0DF68D5275137BC00740C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DF68D4275137BC00740C0F /* Assets.xcassets */; };
+		F0DF68DD2751381B00740C0F /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F0DF68DC2751381B00740C0F /* SPConfetti */; };
 		F409BE2026AEAFB9002AB784 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409BE1F26AEAFB9002AB784 /* PreviewController.swift */; };
 		F43F829D26578DCA001D9B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43F829426578DCA001D9B3D /* Assets.xcassets */; };
 		F43F829E26578DCA001D9B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F829526578DCA001D9B3D /* LaunchScreen.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F0DF68CE275137BB00740C0F /* iOS SwiftUI Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS SwiftUI Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0DF68D0275137BB00740C0F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F0DF68D2275137BB00740C0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F0DF68D4275137BC00740C0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F409BE1F26AEAFB9002AB784 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
 		F4399E50273022A700168720 /* SPConfetti */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPConfetti; path = ..; sourceTree = "<group>"; };
 		F43F827B26578D83001D9B3D /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +60,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F0DF68CB275137BB00740C0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0DF68DD2751381B00740C0F /* SPConfetti in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F43F827826578D83001D9B3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -74,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0DF68CF275137BB00740C0F /* iOS SwiftUI Example */ = {
+			isa = PBXGroup;
+			children = (
+				F0DF68D0275137BB00740C0F /* Main.swift */,
+				F0DF68D2275137BB00740C0F /* ContentView.swift */,
+				F0DF68D4275137BC00740C0F /* Assets.xcassets */,
+			);
+			path = "iOS SwiftUI Example";
+			sourceTree = "<group>";
+		};
 		F409BE1E26AEAF2C002AB784 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +113,7 @@
 			children = (
 				F4399E50273022A700168720 /* SPConfetti */,
 				F43F829226578DCA001D9B3D /* iOS Example */,
+				F0DF68CF275137BB00740C0F /* iOS SwiftUI Example */,
 				F43F82AC26578F03001D9B3D /* tvOS Example */,
 				F43F827C26578D83001D9B3D /* Products */,
 				F43F82A426578E31001D9B3D /* Frameworks */,
@@ -98,6 +125,7 @@
 			children = (
 				F43F827B26578D83001D9B3D /* iOS Example.app */,
 				F43F82AB26578F03001D9B3D /* tvOS Example.app */,
+				F0DF68CE275137BB00740C0F /* iOS SwiftUI Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +188,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F0DF68CD275137BB00740C0F /* iOS SwiftUI Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0DF68DB275137BC00740C0F /* Build configuration list for PBXNativeTarget "iOS SwiftUI Example" */;
+			buildPhases = (
+				F0DF68CA275137BB00740C0F /* Sources */,
+				F0DF68CB275137BB00740C0F /* Frameworks */,
+				F0DF68CC275137BB00740C0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS SwiftUI Example";
+			packageProductDependencies = (
+				F0DF68DC2751381B00740C0F /* SPConfetti */,
+			);
+			productName = "iOS SwiftUI Example";
+			productReference = F0DF68CE275137BB00740C0F /* iOS SwiftUI Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F43F827A26578D83001D9B3D /* iOS Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F43F828F26578D84001D9B3D /* Build configuration list for PBXNativeTarget "iOS Example" */;
@@ -210,9 +258,12 @@
 		F43F827326578D83001D9B3D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					F0DF68CD275137BB00740C0F = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					F43F827A26578D83001D9B3D = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -239,12 +290,21 @@
 			projectRoot = "";
 			targets = (
 				F43F827A26578D83001D9B3D /* iOS Example */,
+				F0DF68CD275137BB00740C0F /* iOS SwiftUI Example */,
 				F43F82AA26578F03001D9B3D /* tvOS Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F0DF68CC275137BB00740C0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0DF68D5275137BC00740C0F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F43F827926578D83001D9B3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,6 +326,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F0DF68CA275137BB00740C0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0DF68D3275137BB00740C0F /* ContentView.swift in Sources */,
+				F0DF68D1275137BB00740C0F /* Main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F43F827726578D83001D9B3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,6 +367,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F0DF68D9275137BC00740C0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "by.ivanvorobei.opensource.spconfetti.ios.swiftui.iOS-SwiftUI-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0DF68DA275137BC00740C0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "by.ivanvorobei.opensource.spconfetti.ios.swiftui.iOS-SwiftUI-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F43F828D26578D84001D9B3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -499,6 +630,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F0DF68DB275137BC00740C0F /* Build configuration list for PBXNativeTarget "iOS SwiftUI Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0DF68D9275137BC00740C0F /* Debug */,
+				F0DF68DA275137BC00740C0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F43F827626578D83001D9B3D /* Build configuration list for PBXProject "SPConfetti" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -548,6 +688,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F0DF68DC2751381B00740C0F /* SPConfetti */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SPConfetti;
+		};
 		F49E01D526A45B330099F1D2 /* SPConfetti */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SPConfetti;
