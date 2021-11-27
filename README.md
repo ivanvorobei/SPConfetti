@@ -39,7 +39,7 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 
 ## Installation
 
-Ready for use on iOS 10+. Works with Swift 5+. Required Xcode 12.0 and higher.
+Ready for use on iOS 11+. Works with Swift 5+. Required Xcode 12.0 and higher.
 
 <img align="right" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/spm-install-preview.png" width="520"/>
 
