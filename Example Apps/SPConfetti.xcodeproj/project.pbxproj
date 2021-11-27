@@ -22,6 +22,8 @@
 		F4C8FF042752245B00BCF7E0 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF68D0275137BB00740C0F /* Main.swift */; };
 		F4C8FF062752247800BCF7E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F829526578DCA001D9B3D /* LaunchScreen.storyboard */; };
 		F4C8FF2B2752287500BCF7E0 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F4C8FF2A2752287500BCF7E0 /* SPConfetti */; };
+		F4C8FF2D27529D6500BCF7E0 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4C8FF2C27529D6500BCF7E0 /* SparrowKit */; };
+		F4C8FF2F27529D6800BCF7E0 /* SPDiffable in Frameworks */ = {isa = PBXBuildFile; productRef = F4C8FF2E27529D6800BCF7E0 /* SPDiffable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C8FF2F27529D6800BCF7E0 /* SPDiffable in Frameworks */,
+				F4C8FF2D27529D6500BCF7E0 /* SparrowKit in Frameworks */,
 				F4C8FEFB2752215500BCF7E0 /* SPConfetti in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +224,8 @@
 			name = "iOS UIKit Example";
 			packageProductDependencies = (
 				F4C8FEFA2752215500BCF7E0 /* SPConfetti */,
+				F4C8FF2C27529D6500BCF7E0 /* SparrowKit */,
+				F4C8FF2E27529D6800BCF7E0 /* SPDiffable */,
 			);
 			productName = SparrowKit;
 			productReference = F43F827B26578D83001D9B3D /* iOS UIKit Example.app */;
@@ -556,7 +562,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPYZ6A48AA;
 				INFOPLIST_FILE = "iOS UIKit Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,7 +584,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPYZ6A48AA;
 				INFOPLIST_FILE = "iOS UIKit Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,6 +716,16 @@
 		F4C8FF2A2752287500BCF7E0 /* SPConfetti */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SPConfetti;
+		};
+		F4C8FF2C27529D6500BCF7E0 /* SparrowKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4BAA4332658292F00DA5BF7 /* XCRemoteSwiftPackageReference "SparrowKit" */;
+			productName = SparrowKit;
+		};
+		F4C8FF2E27529D6800BCF7E0 /* SPDiffable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4B96F97265AC34400A01A29 /* XCRemoteSwiftPackageReference "SPDiffable" */;
+			productName = SPDiffable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

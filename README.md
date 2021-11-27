@@ -1,4 +1,4 @@
-<img align="left" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/latest-preview.jpg" width="400"/>
+<img align="left" src="https://cdn.ivanvorobei.by/github/spconfetti/latest-preview.jpg" width="400"/>
 
 # SPConfetti
 
@@ -41,7 +41,7 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
 
 Ready for use on iOS 11+. Works with Swift 5+. Required Xcode 12.0 and higher.
 
-<img align="right" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/spm-install-preview.png" width="520"/>
+<img align="right" src="https://cdn.ivanvorobei.by/github/spconfetti/spm-install-preview.png" width="520"/>
 
 ### Swift Package Manager
 
@@ -51,7 +51,7 @@ Once you have your Swift package set up, adding as a dependency is as easy as ad
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ivanvorobei/SPConfetti", .upToNextMajor(from: "1.3.2"))
+    .package(url: "https://github.com/ivanvorobei/SPConfetti", .upToNextMajor(from: "1.3.3"))
 ]
 ```
 

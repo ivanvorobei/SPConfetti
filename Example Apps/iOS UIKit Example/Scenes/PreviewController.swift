@@ -90,7 +90,7 @@ class PreviewController: SPDiffableTableController {
                     icon: particle.image.resize(newWidth: 18).withRenderingMode(.alwaysTemplate),
                     accessoryType: isCheckmarked(particle) ? .checkmark : .none,
                     selectionStyle: .none,
-                    action: { [weak self] _ in
+                    action: { [weak self] _, _ in
                         guard let self = self else { return }
                         if self.isCheckmarked(particle) {
                             self.currentParticles = self.currentParticles.filter({ $0.id != particle.id })
@@ -124,7 +124,7 @@ class PreviewController: SPDiffableTableController {
                     icon: iconImage,
                     accessoryType: (animation.id == currentAnimation.id) ? .checkmark : .none,
                     selectionStyle: .none,
-                    action: { [weak self] _ in
+                    action: { [weak self] _, _ in
                         guard let self = self else { return }
                         self.currentAnimation = animation
                     })
