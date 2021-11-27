@@ -39,13 +39,16 @@ public class SPConfetti {
      
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
+     - parameter window: The targe window. Use key window if `nil`.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle]) {
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil) {
         shared.view.animation = animation
         shared.view.particles = particles
-        guard let window = UIApplication.shared.keyWindow else { return }
-        if shared.view.superview == nil {
+        guard let window = window ?? UIApplication.shared.keyWindow else { return }
+        if let superview = shared.view.superview, superview == window {
+            superview.bringSubviewToFront(shared.view)
+        } else {
             window.addSubview(shared.view)
         }
         shared.view.frame = window.bounds
@@ -59,10 +62,11 @@ public class SPConfetti {
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
      - parameter duration: Automatically stop animation after this time interval.
+     - parameter window: The targe window. Use key window if `nil`.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval) {
-        startAnimating(animation, particles: particles)
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, in window: UIWindow? = nil) {
+        startAnimating(animation, particles: particles, in: window)
         delay(duration, closure: {
             stopAnimating()
         })
