@@ -103,9 +103,7 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
 
 @available(iOS 13.0, *)
 extension SPConfettiParticlesConfig: EnvironmentKey {
-    public static var defaultValue: Self {
-        SPConfettiConfiguration.particlesConfig
-    }
+    public static let defaultValue: Self = .init()
 }
 
 @available(iOS 13.0, *)
