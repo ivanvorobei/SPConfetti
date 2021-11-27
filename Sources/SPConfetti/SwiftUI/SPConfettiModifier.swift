@@ -134,22 +134,9 @@ extension View {
         )
     }
     
-    public func confettiParticleVelocity(_ value: Double, range: Double) -> some View {
+    public func confettiParticle<T>(_ keyPath: WritableKeyPath<SPConfettiParticlesConfig, T>, _ value: T) -> some View {
         self.transformEnvironment(\.confettiParticlesConfiguration) {
-            $0.velocity = value
-            $0.velocityRange = range
-        }
-    }
-    
-    public func confettiParticleBirthRate(_ value: Double) -> some View {
-        self.transformEnvironment(\.confettiParticlesConfiguration) {
-            $0.birthRate = Float(value)
-        }
-    }
-    
-    public func confettiParticleSpin(_ value: Double) -> some View {
-        self.transformEnvironment(\.confettiParticlesConfiguration) {
-            $0.spin = value
+            $0[keyPath: keyPath] = value
         }
     }
     

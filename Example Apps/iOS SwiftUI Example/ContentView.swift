@@ -22,10 +22,10 @@ struct ContentView: View {
                   animation: .fullWidthToDown,
                   particles: [.triangle, .arc, .heart],
                   duration: 1.0)
-        
-        .confettiParticleVelocity(600, range: 200)
-        .confettiParticleBirthRate(100)
-        .confettiParticleSpin(4)
+        .confettiParticle(\.velocity, 600)
+        .confettiParticle(\.velocityRange, 200)
+        .confettiParticle(\.birthRate, 100)
+        .confettiParticle(\.spin, 4)
     }
 }
 
