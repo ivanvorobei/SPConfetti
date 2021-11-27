@@ -84,6 +84,26 @@ SPConfetti.startAnimating(.centerWidthToDown, particles: [.triangle, .arc], dura
 
 You can manage by view `SPConfettiView` with custom layout if need.
 
+## SwiftUI
+
+If you are using SwiftUI, it is recommended that you use the modifier we provide. This will ensure the confetti effects are presented within the corresponding window scene.
+
+```swift
+struct FancyButton: View {
+    @State private var isPresenting = false
+    
+    var body: some View {
+        Button("🎉 hooray!", action: { isPresenting.toggle() })
+            .confetti(isPresented: $isPresenting,
+                      animation: .fullWidthToDown,
+                      particles: [.triangle, .arc],
+                      duration: 3.0)
+    }
+}
+```
+
+The confetti modifier can be attached to any of the view hierarchies. It will always produce a full screen effect.
+
 ## Customise
 
 ### Animation
@@ -130,6 +150,28 @@ You can set global values with configuration object. It will apply for all next 
 // For example, available more
 SPConfettiConfiguration.particles = [.star]
 SPConfettiConfiguration.particlesConfig.colors = [.systemRed, .sytemBlue]
+```
+
+### SwiftUI Configuration
+
+The global configuration above also works in SwiftUI. However, you can set different configurations for each confetti separately by using the `.confettiParticle(_:_:)` modifier.
+
+```swift
+VStack {
+    Button("Fast", action: { isPresenting1.toggle() })
+            .confetti(isPresented: $isPresenting1,
+                      animation: .fullWidthToDown,
+                      particles: [.triangle, .arc],
+                      duration: 3.0)
+            .confettiParticle(\.velocity, 600)
+
+    Button("Slow", action: { isPresenting2.toggle() })
+            .confetti(isPresented: $isPresenting2,
+                      animation: .fullWidthToDown,
+                      particles: [.triangle, .arc],
+                      duration: 3.0)
+            .confettiParticle(\.velocity, 100)
+}
 ```
 
 ## Delegate
