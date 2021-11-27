@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F0DF68CD275137BB00740C0F"
-               BuildableName = "SPConfetti 2.app"
+               BuildableName = "SPConfetti SwiftUI.app"
                BlueprintName = "iOS SwiftUI Example"
                ReferencedContainer = "container:SPConfetti.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F0DF68CD275137BB00740C0F"
-            BuildableName = "SPConfetti 2.app"
+            BuildableName = "SPConfetti SwiftUI.app"
             BlueprintName = "iOS SwiftUI Example"
             ReferencedContainer = "container:SPConfetti.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F0DF68CD275137BB00740C0F"
-            BuildableName = "SPConfetti 2.app"
+            BuildableName = "SPConfetti SwiftUI.app"
             BlueprintName = "iOS SwiftUI Example"
             ReferencedContainer = "container:SPConfetti.xcodeproj">
          </BuildableReference>

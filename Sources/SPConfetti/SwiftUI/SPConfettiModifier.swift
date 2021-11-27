@@ -19,6 +19,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+// Thanks for @gongzhang for PR!
+
+#if canImport(SwiftUI)
 import SwiftUI
 
 /// An empty placeholder view that used to retrieve current window and trigger confetti.
@@ -26,6 +29,7 @@ import SwiftUI
 struct ConfettiPlaceholderView: UIViewRepresentable {
     
     @Binding var isPresented: Bool
+    
     var animation: SPConfettiAnimation
     var particles: [SPConfettiParticle]
     var duration: TimeInterval?
@@ -138,3 +142,4 @@ extension View {
         }
     }
 }
+#endif
