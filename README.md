@@ -95,6 +95,7 @@ If you are using SwiftUI, it is recommended that you use the modifier we provide
 
 ```swift
 struct FancyButton: View {
+
     @State private var isPresenting = false
     
     var body: some View {
