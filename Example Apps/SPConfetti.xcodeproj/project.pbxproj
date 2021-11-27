@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0DF68D1275137BB00740C0F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF68D0275137BB00740C0F /* Main.swift */; };
-		F0DF68D3275137BB00740C0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF68D2275137BB00740C0F /* ContentView.swift */; };
 		F0DF68D5275137BC00740C0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0DF68D4275137BC00740C0F /* Assets.xcassets */; };
-		F0DF68DD2751381B00740C0F /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F0DF68DC2751381B00740C0F /* SPConfetti */; };
 		F409BE2026AEAFB9002AB784 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F409BE1F26AEAFB9002AB784 /* PreviewController.swift */; };
 		F43F829D26578DCA001D9B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43F829426578DCA001D9B3D /* Assets.xcassets */; };
 		F43F829E26578DCA001D9B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F829526578DCA001D9B3D /* LaunchScreen.storyboard */; };
 		F43F829F26578DCA001D9B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F829726578DCA001D9B3D /* AppDelegate.swift */; };
 		F43F82A126578DCA001D9B3D /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F829B26578DCA001D9B3D /* PreviewController.swift */; };
-		F49E01D626A45B330099F1D2 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F49E01D526A45B330099F1D2 /* SPConfetti */; };
-		F49E01D826A45B390099F1D2 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F49E01D726A45B390099F1D2 /* SPConfetti */; };
-		F4B96F99265AC34400A01A29 /* SPDiffable in Frameworks */ = {isa = PBXBuildFile; productRef = F4B96F98265AC34400A01A29 /* SPDiffable */; };
-		F4BAA4352658292F00DA5BF7 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4BAA4342658292F00DA5BF7 /* SparrowKit */; };
 		F4BAA4392658293F00DA5BF7 /* SparrowKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4BAA4382658293F00DA5BF7 /* SparrowKit */; };
 		F4BAA4402658297300DA5BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BAA43D2658297300DA5BF7 /* LaunchScreen.storyboard */; };
 		F4BAA4412658297300DA5BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BAA43E2658297300DA5BF7 /* Assets.xcassets */; };
 		F4BAA4422658297300DA5BF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BAA43F2658297300DA5BF7 /* AppDelegate.swift */; };
+		F4C8FEFB2752215500BCF7E0 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F4C8FEFA2752215500BCF7E0 /* SPConfetti */; };
+		F4C8FEFF2752221E00BCF7E0 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F4C8FEFE2752221E00BCF7E0 /* SPConfetti */; };
+		F4C8FF042752245B00BCF7E0 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DF68D0275137BB00740C0F /* Main.swift */; };
+		F4C8FF062752247800BCF7E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F829526578DCA001D9B3D /* LaunchScreen.storyboard */; };
+		F4C8FF2B2752287500BCF7E0 /* SPConfetti in Frameworks */ = {isa = PBXBuildFile; productRef = F4C8FF2A2752287500BCF7E0 /* SPConfetti */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,23 +38,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F0DF68CE275137BB00740C0F /* iOS SwiftUI Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS SwiftUI Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0DF68CE275137BB00740C0F /* SPConfetti SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SPConfetti SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DF68D0275137BB00740C0F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		F0DF68D2275137BB00740C0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F0DF68D4275137BC00740C0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F409BE1F26AEAFB9002AB784 /* PreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
-		F4399E50273022A700168720 /* SPConfetti */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPConfetti; path = ..; sourceTree = "<group>"; };
-		F43F827B26578D83001D9B3D /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43F827B26578D83001D9B3D /* iOS UIKit Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS UIKit Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43F829426578DCA001D9B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43F829626578DCA001D9B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43F829726578DCA001D9B3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43F829B26578DCA001D9B3D /* PreviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
-		F43F829C26578DCA001D9B3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43F82AB26578F03001D9B3D /* tvOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tvOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43F82B926578F04001D9B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4BAA43D2658297300DA5BF7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4BAA43E2658297300DA5BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4BAA43F2658297300DA5BF7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4C8FEF92752213600BCF7E0 /* SPConfetti */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SPConfetti; path = ..; sourceTree = "<group>"; };
+		F4C8FF08275225E000BCF7E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "iOS UIKit Example/Info.plist"; sourceTree = SOURCE_ROOT; };
+		F4C8FF282752271800BCF7E0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0DF68DD2751381B00740C0F /* SPConfetti in Frameworks */,
+				F4C8FF2B2752287500BCF7E0 /* SPConfetti in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B96F99265AC34400A01A29 /* SPDiffable in Frameworks */,
-				F49E01D626A45B330099F1D2 /* SPConfetti in Frameworks */,
-				F4BAA4352658292F00DA5BF7 /* SparrowKit in Frameworks */,
+				F4C8FEFB2752215500BCF7E0 /* SPConfetti in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4BAA4392658293F00DA5BF7 /* SparrowKit in Frameworks */,
-				F49E01D826A45B390099F1D2 /* SPConfetti in Frameworks */,
+				F4C8FEFF2752221E00BCF7E0 /* SPConfetti in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +89,8 @@
 		F0DF68CF275137BB00740C0F /* iOS SwiftUI Example */ = {
 			isa = PBXGroup;
 			children = (
+				F4C8FF282752271800BCF7E0 /* Info.plist */,
 				F0DF68D0275137BB00740C0F /* Main.swift */,
-				F0DF68D2275137BB00740C0F /* ContentView.swift */,
 				F0DF68D4275137BC00740C0F /* Assets.xcassets */,
 			);
 			path = "iOS SwiftUI Example";
@@ -111,8 +107,8 @@
 		F43F827226578D83001D9B3D = {
 			isa = PBXGroup;
 			children = (
-				F4399E50273022A700168720 /* SPConfetti */,
-				F43F829226578DCA001D9B3D /* iOS Example */,
+				F4C8FEF92752213600BCF7E0 /* SPConfetti */,
+				F43F829226578DCA001D9B3D /* iOS UIKit Example */,
 				F0DF68CF275137BB00740C0F /* iOS SwiftUI Example */,
 				F43F82AC26578F03001D9B3D /* tvOS Example */,
 				F43F827C26578D83001D9B3D /* Products */,
@@ -123,26 +119,26 @@
 		F43F827C26578D83001D9B3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F43F827B26578D83001D9B3D /* iOS Example.app */,
+				F43F827B26578D83001D9B3D /* iOS UIKit Example.app */,
 				F43F82AB26578F03001D9B3D /* tvOS Example.app */,
-				F0DF68CE275137BB00740C0F /* iOS SwiftUI Example.app */,
+				F0DF68CE275137BB00740C0F /* SPConfetti SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F43F829226578DCA001D9B3D /* iOS Example */ = {
+		F43F829226578DCA001D9B3D /* iOS UIKit Example */ = {
 			isa = PBXGroup;
 			children = (
 				F43F829326578DCA001D9B3D /* App */,
 				F43F829A26578DCA001D9B3D /* Scenes */,
-				F43F829C26578DCA001D9B3D /* Info.plist */,
 			);
-			path = "iOS Example";
+			path = "iOS UIKit Example";
 			sourceTree = "<group>";
 		};
 		F43F829326578DCA001D9B3D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				F4C8FF08275225E000BCF7E0 /* Info.plist */,
 				F43F829726578DCA001D9B3D /* AppDelegate.swift */,
 				F43F829426578DCA001D9B3D /* Assets.xcassets */,
 				F43F829526578DCA001D9B3D /* LaunchScreen.storyboard */,
@@ -202,15 +198,15 @@
 			);
 			name = "iOS SwiftUI Example";
 			packageProductDependencies = (
-				F0DF68DC2751381B00740C0F /* SPConfetti */,
+				F4C8FF2A2752287500BCF7E0 /* SPConfetti */,
 			);
 			productName = "iOS SwiftUI Example";
-			productReference = F0DF68CE275137BB00740C0F /* iOS SwiftUI Example.app */;
+			productReference = F0DF68CE275137BB00740C0F /* SPConfetti SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F43F827A26578D83001D9B3D /* iOS Example */ = {
+		F43F827A26578D83001D9B3D /* iOS UIKit Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F43F828F26578D84001D9B3D /* Build configuration list for PBXNativeTarget "iOS Example" */;
+			buildConfigurationList = F43F828F26578D84001D9B3D /* Build configuration list for PBXNativeTarget "iOS UIKit Example" */;
 			buildPhases = (
 				F43F827726578D83001D9B3D /* Sources */,
 				F43F827826578D83001D9B3D /* Frameworks */,
@@ -221,14 +217,12 @@
 			);
 			dependencies = (
 			);
-			name = "iOS Example";
+			name = "iOS UIKit Example";
 			packageProductDependencies = (
-				F4BAA4342658292F00DA5BF7 /* SparrowKit */,
-				F4B96F98265AC34400A01A29 /* SPDiffable */,
-				F49E01D526A45B330099F1D2 /* SPConfetti */,
+				F4C8FEFA2752215500BCF7E0 /* SPConfetti */,
 			);
 			productName = SparrowKit;
-			productReference = F43F827B26578D83001D9B3D /* iOS Example.app */;
+			productReference = F43F827B26578D83001D9B3D /* iOS UIKit Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F43F82AA26578F03001D9B3D /* tvOS Example */ = {
@@ -246,7 +240,7 @@
 			name = "tvOS Example";
 			packageProductDependencies = (
 				F4BAA4382658293F00DA5BF7 /* SparrowKit */,
-				F49E01D726A45B390099F1D2 /* SPConfetti */,
+				F4C8FEFE2752221E00BCF7E0 /* SPConfetti */,
 			);
 			productName = "tvOS Example";
 			productReference = F43F82AB26578F03001D9B3D /* tvOS Example.app */;
@@ -289,7 +283,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F43F827A26578D83001D9B3D /* iOS Example */,
+				F43F827A26578D83001D9B3D /* iOS UIKit Example */,
 				F0DF68CD275137BB00740C0F /* iOS SwiftUI Example */,
 				F43F82AA26578F03001D9B3D /* tvOS Example */,
 			);
@@ -302,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0DF68D5275137BC00740C0F /* Assets.xcassets in Resources */,
+				F4C8FF062752247800BCF7E0 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0DF68D3275137BB00740C0F /* ContentView.swift in Sources */,
-				F0DF68D1275137BB00740C0F /* Main.swift in Sources */,
+				F4C8FF042752245B00BCF7E0 /* Main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,27 +365,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5KKK9SKF79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "iOS SwiftUI Example/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SPConfetti SwiftUI";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "by.ivanvorobei.opensource.spconfetti.ios.swiftui.iOS-SwiftUI-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.opensource.spconfetti.ios.swiftui;
+				PRODUCT_MODULE_NAME = SPConfetti_SwiftUI;
+				PRODUCT_NAME = "SPConfetti SwiftUI";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,27 +400,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5KKK9SKF79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "iOS SwiftUI Example/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "SPConfetti SwiftUI";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "by.ivanvorobei.opensource.spconfetti.ios.swiftui.iOS-SwiftUI-Example";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.opensource.spconfetti.ios.swiftui;
+				PRODUCT_MODULE_NAME = SPConfetti_SwiftUI;
+				PRODUCT_NAME = "SPConfetti SwiftUI";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -551,14 +553,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPYZ6A48AA;
-				INFOPLIST_FILE = "iOS Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				INFOPLIST_FILE = "iOS UIKit Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.opensource.spconfetti.ios;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.opensource.spconfetti.ios.uikit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -571,14 +575,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPYZ6A48AA;
-				INFOPLIST_FILE = "iOS Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				INFOPLIST_FILE = "iOS UIKit Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.opensource.spconfetti.ios;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = by.ivanvorobei.opensource.spconfetti.ios.uikit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -648,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F43F828F26578D84001D9B3D /* Build configuration list for PBXNativeTarget "iOS Example" */ = {
+		F43F828F26578D84001D9B3D /* Build configuration list for PBXNativeTarget "iOS UIKit Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F43F829026578D84001D9B3D /* Debug */,
@@ -681,39 +687,29 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ivanvorobei/SparrowKit";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F0DF68DC2751381B00740C0F /* SPConfetti */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SPConfetti;
-		};
-		F49E01D526A45B330099F1D2 /* SPConfetti */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SPConfetti;
-		};
-		F49E01D726A45B390099F1D2 /* SPConfetti */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SPConfetti;
-		};
-		F4B96F98265AC34400A01A29 /* SPDiffable */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F4B96F97265AC34400A01A29 /* XCRemoteSwiftPackageReference "SPDiffable" */;
-			productName = SPDiffable;
-		};
-		F4BAA4342658292F00DA5BF7 /* SparrowKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F4BAA4332658292F00DA5BF7 /* XCRemoteSwiftPackageReference "SparrowKit" */;
-			productName = SparrowKit;
-		};
 		F4BAA4382658293F00DA5BF7 /* SparrowKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4BAA4332658292F00DA5BF7 /* XCRemoteSwiftPackageReference "SparrowKit" */;
 			productName = SparrowKit;
+		};
+		F4C8FEFA2752215500BCF7E0 /* SPConfetti */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SPConfetti;
+		};
+		F4C8FEFE2752221E00BCF7E0 /* SPConfetti */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SPConfetti;
+		};
+		F4C8FF2A2752287500BCF7E0 /* SPConfetti */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SPConfetti;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

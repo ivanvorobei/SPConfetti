@@ -27,31 +27,32 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
     - [CocoaPods](#cocoapods)
     - [Manually](#manually)
 - [Quick Start](#quick-start)
-- [SwiftUI](#swiftui)
-- [Customise](#usage)
+    - [UIKit](#uikit)
+    - [SwiftUI](#swiftui)
+- [Usage UIKit](#usage-uikit)
     - [Animation](#animation)
     - [Particles](#particles)
     - [Shared Configuration](#shared-configuration)
-    - [SwiftUI Configuration](#swiftui-configuration)
-- [Delegate](#delegate)
-- [Сontribution](#сontribution)
-- [Other Projects](#other-projects)
+    - [Delegate](#delegate)
+- [Usage SwiftUI](#usage-swiftui)
 - [Russian Community](#russian-community)
 
 ## Installation
 
-Ready for use on iOS & tvOS 10+. Works with Swift 5+. Required Xcode 12.0 and higher.
+Ready for use on iOS 10+. Works with Swift 5+. Required Xcode 12.0 and higher.
 
 <img align="right" src="https://github.com/ivanvorobei/SPConfetti/blob/main/Assets/Readme/spm-install-preview.png" width="520"/>
 
 ### Swift Package Manager
 
-The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
 
-To integrate using Xcode 12, specify it in `File > Swift Packages > Add Package Dependency...`:
+Once you have your Swift package set up, adding as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
 
-```ogdl
-https://github.com/ivanvorobei/SPConfetti
+```swift
+dependencies: [
+    .package(url: "https://github.com/ivanvorobei/SPConfetti", .upToNextMajor(from: "1.3.0"))
+]
 ```
 
 ### CocoaPods:
@@ -64,9 +65,11 @@ pod 'SPConfetti'
 
 ### Manually
 
-If you prefer not to use any of dependency managers, you can integrate manually. Put `Sources/ProjectName` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
+If you prefer not to use any of dependency managers, you can integrate manually. Put `Sources/SPConfetti` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
 ## Quick Start
+
+### UIKit
 
 For easy start confetti animation call this:
 
@@ -86,7 +89,7 @@ SPConfetti.startAnimating(.centerWidthToDown, particles: [.triangle, .arc], dura
 
 You can manage by view `SPConfettiView` with custom layout if need.
 
-## SwiftUI
+### SwiftUI
 
 If you are using SwiftUI, it is recommended that you use the modifier we provide. This will ensure the confetti effects are presented within the corresponding window scene.
 
@@ -106,7 +109,7 @@ struct FancyButton: View {
 
 The confetti modifier can be attached to any of the view hierarchies. It will always produce a full screen effect.
 
-## Customise
+## Usage UIKit
 
 ### Animation
 
@@ -154,28 +157,6 @@ SPConfettiConfiguration.particles = [.star]
 SPConfettiConfiguration.particlesConfig.colors = [.systemRed, .sytemBlue]
 ```
 
-### SwiftUI Configuration
-
-The global configuration above also works in SwiftUI. However, you can set different configurations for each confetti separately by using the `.confettiParticle(_:_:)` modifier.
-
-```swift
-VStack {
-    Button("Fast", action: { isPresenting1.toggle() })
-            .confetti(isPresented: $isPresenting1,
-                      animation: .fullWidthToDown,
-                      particles: [.triangle, .arc],
-                      duration: 3.0)
-            .confettiParticle(\.velocity, 600)
-
-    Button("Slow", action: { isPresenting2.toggle() })
-            .confetti(isPresented: $isPresenting2,
-                      animation: .fullWidthToDown,
-                      particles: [.triangle, .arc],
-                      duration: 3.0)
-            .confettiParticle(\.velocity, 100)
-}
-```
-
 ## Delegate
 
 For get notification about events, set delegate for view and implement protocol `SPConfettiDelegate`: 
@@ -202,23 +183,27 @@ protocol SPConfettiDelegate: AnyObject {
 }
 ```
 
-## Сontribution
+## Usage SwiftUI
 
-My English is very bad. You can see this once you read the documentation. I would really like to have clean and nice documentation. If you see gramatical errors and can help fix the Readme, please contact me hello@ivanvorobei.by or make a Pull Request. Thank you in advance!
+The global configuration above also works in SwiftUI. However, you can set different configurations for each confetti separately by using the `.confettiParticle(_:_:)` modifier.
 
-## Other Projects
+```swift
+VStack {
+    Button("Fast", action: { isPresenting1.toggle() })
+            .confetti(isPresented: $isPresenting1,
+                      animation: .fullWidthToDown,
+                      particles: [.triangle, .arc],
+                      duration: 3.0)
+            .confettiParticle(\.velocity, 600)
 
-I love being helpful. Here I have provided a list of libraries that I keep up to date. For see `video previews` of libraries without install open [opensource.ivanvorobei.by](https://opensource.ivanvorobei.by) website.<br>
-I have libraries with native interface and managing permissions. Also available pack of useful extensions for boost your development process.
-
-<p float="left">
-    <a href="https://opensource.ivanvorobei.by">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
-    </a>
-        <a href="https://xcodeshop.ivanvorobei.by">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/xcode-shop.svg">
-    </a>
-</p>
+    Button("Slow", action: { isPresenting2.toggle() })
+            .confetti(isPresented: $isPresenting2,
+                      animation: .fullWidthToDown,
+                      particles: [.triangle, .arc],
+                      duration: 3.0)
+            .confettiParticle(\.velocity, 100)
+}
+```
 
 ## Russian Community
 

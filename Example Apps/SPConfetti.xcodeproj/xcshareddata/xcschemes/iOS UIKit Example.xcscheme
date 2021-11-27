@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F43F827A26578D83001D9B3D"
-               BuildableName = "iOS Example.app"
-               BlueprintName = "iOS Example"
+               BuildableName = "iOS UIKit Example.app"
+               BlueprintName = "iOS UIKit Example"
                ReferencedContainer = "container:SPConfetti.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F43F827A26578D83001D9B3D"
-            BuildableName = "iOS Example.app"
-            BlueprintName = "iOS Example"
+            BuildableName = "iOS UIKit Example.app"
+            BlueprintName = "iOS UIKit Example"
             ReferencedContainer = "container:SPConfetti.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F43F827A26578D83001D9B3D"
-            BuildableName = "iOS Example.app"
-            BlueprintName = "iOS Example"
+            BuildableName = "iOS UIKit Example.app"
+            BlueprintName = "iOS UIKit Example"
             ReferencedContainer = "container:SPConfetti.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

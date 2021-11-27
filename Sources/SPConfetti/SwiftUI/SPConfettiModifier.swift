@@ -22,7 +22,7 @@
 import SwiftUI
 
 /// An empty placeholder view that used to retrieve current window and trigger confetti.
-@available(iOS 13.0, *)
+@available(iOS 13.0, tvOS 13.0, *)
 struct ConfettiPlaceholderView: UIViewRepresentable {
     
     @Binding var isPresented: Bool
@@ -106,7 +106,7 @@ extension SPConfettiParticlesConfig: EnvironmentKey {
     public static let defaultValue: Self = .init()
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, tvOS 13.0, *)
 extension EnvironmentValues {
     public var confettiParticlesConfiguration: SPConfettiParticlesConfig {
         get { self[SPConfettiParticlesConfig.self] }
@@ -114,7 +114,7 @@ extension EnvironmentValues {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, tvOS 13.0, *)
 extension View {
     
     /**
@@ -137,5 +137,4 @@ extension View {
             $0[keyPath: keyPath] = value
         }
     }
-    
 }

@@ -5,9 +5,9 @@
         "package": "SparrowKit",
         "repositoryURL": "https://github.com/ivanvorobei/SparrowKit",
         "state": {
-          "branch": "main",
-          "revision": "d1a2d489417f98620558da08ddcf44a9d53e58f3",
-          "version": null
+          "branch": null,
+          "revision": "63bbc09105de1239c00927d3244d9fd67f9c66a5",
+          "version": "3.4.2"
         }
       },
       {

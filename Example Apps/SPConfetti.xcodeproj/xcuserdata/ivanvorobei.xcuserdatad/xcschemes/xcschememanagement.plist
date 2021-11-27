@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>iOS Example.xcscheme_^#shared#^_</key>
+		<key>iOS SwiftUI Example.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>iOS UIKit Example.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +17,7 @@
 		<key>tvOS Example.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>watchOS Example.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,6 +27,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F0DF68CD275137BB00740C0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F43F827A26578D83001D9B3D</key>
 		<dict>
 			<key>primary</key>
