@@ -234,6 +234,14 @@ open class SPConfettiView: UIView {
             cell.color = color.cgColor
         }
         cell.contents = image.cgImage
+        
+        // Make 3D
+        cell.setValue("plane", forKey: "particleType")
+        cell.setValue(Double.pi, forKey: "orientationRange")
+        cell.setValue(Double.pi, forKey: "orientationLongitude")
+        cell.setValue(Double.pi, forKey: "orientationLatitude")
+        // End make 3d
+        
         return cell
     }
     
