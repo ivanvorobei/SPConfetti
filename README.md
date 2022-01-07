@@ -1,24 +1,12 @@
-<img align="left" src="https://cdn.ivanvorobei.by/github/spconfetti/latest-preview.jpg" width="400"/>
-
 # SPConfetti
 
-A simple solution to show the confetti to the user. Smoothly starts and stops. Allow set multiply diffrent particles at once.
-
-<p float="left">
-    <a href="https://opensource.ivanvorobei.by/spconfetti/preview">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/video-preview.svg">
-    </a>
+<p aligment="left">
+    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/easy-start.png?version=1" height="180"/>
+    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/particles.png?version=1" height="180"/>
+    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/directions.png?version=1" height="180"/>
 </p>
 
-You can change shapes and switch between styles. It is possible to change the size and position of emitter. Ready use arc, star, heart triangle shapes. You can set custom shapes with your image.
-
-If you like the project, don't forget to `put star ★`<br>Check out my other libraries:
-
-<p float="left">
-    <a href="https://opensource.ivanvorobei.by">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/more-libraries.svg">
-    </a>
-</p>
+A simple solution to show the confetti to the user. Smoothly starts and stops. Allow set multiply diffrent particles at once. You can change shapes and switch between styles. It is possible to change the size and position of emitter. Ready use arc, star, heart triangle shapes. You can set custom shapes with your image.
 
 ## Navigate
 
@@ -26,22 +14,18 @@ If you like the project, don't forget to `put star ★`<br>Check out my other li
     - [Swift Package Manager](#swift-package-manager)
     - [CocoaPods](#cocoapods)
     - [Manually](#manually)
-- [Quick Start](#quick-start)
-    - [UIKit](#uikit)
-    - [SwiftUI](#swiftui)
-- [Usage UIKit](#usage-uikit)
+- [UIKit](#uikit)
+    - [Quick Start](#uikit)
     - [Animation](#animation)
     - [Particles](#particles)
-    - [Shared Configuration](#shared-configuration)
+    - [Global Appearance](#global-appearance)
     - [Delegate](#delegate)
-- [Usage SwiftUI](#usage-swiftui)
+- [SwiftUI](#swiftui)
 - [Russian Community](#russian-community)
 
 ## Installation
 
-Ready for use on iOS 11+. Works with Swift 5+. Required Xcode 12.0 and higher.
-
-<img align="right" src="https://cdn.ivanvorobei.by/github/spconfetti/spm-install-preview.png" width="520"/>
+Ready for use on iOS 11+ & tvOS 11+.
 
 ### Swift Package Manager
 
@@ -51,13 +35,13 @@ Once you have your Swift package set up, adding as a dependency is as easy as ad
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/ivanvorobei/SPConfetti", .upToNextMajor(from: "1.3.3"))
+    .package(url: "https://github.com/ivanvorobei/SPConfetti", .upToNextMajor(from: "1.4.0"))
 ]
 ```
 
 ### CocoaPods:
 
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate using CocoaPods, specify it in your `Podfile`:
+[CocoaPods](https://cocoapods.org) is a dependency manager. For usage and installation instructions, visit their website. To integrate using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'SPConfetti'
@@ -67,9 +51,9 @@ pod 'SPConfetti'
 
 If you prefer not to use any of dependency managers, you can integrate manually. Put `Sources/SPConfetti` folder in your Xcode project. Make sure to enable `Copy items if needed` and `Create groups`.
 
-## Quick Start
+## UIKit
 
-### UIKit
+### Quick Start
 
 For easy start confetti animation call this:
 
@@ -89,32 +73,9 @@ SPConfetti.startAnimating(.centerWidthToDown, particles: [.triangle, .arc], dura
 
 You can manage by view `SPConfettiView` with custom layout if need.
 
-### SwiftUI
-
-If you are using SwiftUI, it is recommended that you use the modifier we provide. This will ensure the confetti effects are presented within the corresponding window scene.
-
-```swift
-struct FancyButton: View {
-
-    @State private var isPresenting = false
-    
-    var body: some View {
-        Button("🎉 hooray!", action: { isPresenting.toggle() })
-            .confetti(isPresented: $isPresenting,
-                      animation: .fullWidthToDown,
-                      particles: [.triangle, .arc],
-                      duration: 3.0)
-    }
-}
-```
-
-The confetti modifier can be attached to any of the view hierarchies. It will always produce a full screen effect.
-
-## Usage UIKit
-
 ### Animation
 
-For change emitter size and direction, use `animation` property. Now available next animations:
+For change emitter size and direction, use `animation` property. Available next animations:
 
 ```swift
 enum SPConfettiAnimation {
@@ -124,11 +85,8 @@ enum SPConfettiAnimation {
     case centerWidthToDown
     case centerWidthToUp
 }
-```
 
-To change animation:
-
-```swift
+// To change animation:
 confettiView.animation = .centerWidthToDown
 ```
 
@@ -137,23 +95,22 @@ confettiView.animation = .centerWidthToDown
 You can customise particles style and animation config.
 
 ```swift
-// Available arc, star, heart, circle, triangle and polygon.
+// Available `.arc`, `.star`, `.heart`, `.circle`, `.triangle` and `.polygon`.
 // You can set many styles particles.
 confettiView.particles = [.star]
 ```
 
-For set custom image use `custom` case:
+For set custom image use `.custom` case:
 
 ```swift
 confettiView.particles = [.custom(yourImage)]
 ```
 
-### Shared Configuration
+### Global Appearance
 
 You can set global values with configuration object. It will apply for all next configuration of confetti view by default.
 
 ```swift
-// For example, available more
 SPConfettiConfiguration.particles = [.star]
 SPConfettiConfiguration.particlesConfig.colors = [.systemRed, .sytemBlue]
 ```
@@ -184,7 +141,26 @@ protocol SPConfettiDelegate: AnyObject {
 }
 ```
 
-## Usage SwiftUI
+## SwiftUI
+
+If you are using SwiftUI, it is recommended that you use the modifier we provide. This will ensure the confetti effects are presented within the corresponding window scene.
+
+```swift
+struct FancyButton: View {
+
+    @State private var isPresenting = false
+    
+    var body: some View {
+        Button("🎉 hooray!", action: { isPresenting.toggle() })
+            .confetti(isPresented: $isPresenting,
+                      animation: .fullWidthToDown,
+                      particles: [.triangle, .arc],
+                      duration: 3.0)
+    }
+}
+```
+
+The confetti modifier can be attached to any of the view hierarchies. It will always produce a full screen effect.
 
 The global configuration above also works in SwiftUI. However, you can set different configurations for each confetti separately by using the `.confettiParticle(_:_:)` modifier.
 
@@ -208,17 +184,8 @@ VStack {
 
 ## Russian Community
 
-Подписывайся в телеграм-канал, если хочешь получать уведомления о новых туториалах.<br>
-Со сложными и непонятными задачами помогут в чате.
-
-<p float="left">
-    <a href="https://sparrowcode.by/telegram">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/open-telegram-channel.svg">
-    </a>
-    <a href="https://sparrowcode.by/telegram/chat">
-        <img src="https://github.com/ivanvorobei/Readme/blob/main/Buttons/russian-community-chat.svg">
-    </a>
-</p>
+Я веду [телеграм-канал](https://sparrowcode.by/telegram), там публикую новости и туториалы.<br>
+С проблемой помогут [в чате](https://sparrowcode.by/telegram/chat).
 
 Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.by/youtube):
 
