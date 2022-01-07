@@ -1,9 +1,9 @@
 # SPConfetti
 
 <p aligment="left">
-    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/easy-start.png?version=1" height="180"/>
-    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/particles.png?version=1" height="180"/>
-    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/directions.png?version=1" height="180"/>
+    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/easy-start.png?version=2" height="180"/>
+    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/particles.png?version=2" height="180"/>
+    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/directions.png?version=2" height="180"/>
 </p>
 
 A simple solution to show the confetti to the user. Smoothly starts and stops. Allow set multiply diffrent particles at once. You can change shapes and switch between styles. It is possible to change the size and position of emitter. Ready use arc, star, heart triangle shapes. You can set custom shapes with your image.
@@ -25,7 +25,7 @@ A simple solution to show the confetti to the user. Smoothly starts and stops. A
 
 ## Installation
 
-Ready for use on iOS 11+ & tvOS 11+.
+Ready for use on iOS 11+ and tvOS 11+.
 
 ### Swift Package Manager
 
