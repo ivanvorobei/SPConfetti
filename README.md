@@ -1,9 +1,9 @@
 # SPConfetti
 
 <p aligment="left">
-    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/easy-start.png?version=2" height="180"/>
-    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/particles.png?version=2" height="180"/>
-    <img src="https://cdn.ivanvorobei.by/github/spconfetti/v1.4/directions.png?version=2" height="180"/>
+    <img src="https://cdn.ivanvorobei.io/github/spconfetti/v1.4/easy-start.png?version=2" height="180"/>
+    <img src="https://cdn.ivanvorobei.io/github/spconfetti/v1.4/particles.png?version=2" height="180"/>
+    <img src="https://cdn.ivanvorobei.io/github/spconfetti/v1.4/directions.png?version=2" height="180"/>
 </p>
 
 A simple solution to show the confetti to the user. Smoothly starts and stops. Allow set multiply diffrent particles at once. You can change shapes and switch between styles. It is possible to change the size and position of emitter. Ready use arc, star, heart triangle shapes. You can set custom shapes with your image.
@@ -187,6 +187,6 @@ VStack {
 Я веду [телеграм-канал](https://sparrowcode.io/telegram), там публикую новости и туториалы.<br>
 С проблемой помогут [в чате](https://sparrowcode.io/telegram/chat).
 
-Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.by/youtube):
+Видео-туториалы выклыдываю на [YouTube](https://ivanvorobei.io/youtube):
 
-[![Tutorials on YouTube](https://cdn.ivanvorobei.by/github/readme/youtube-preview.jpg)](https://ivanvorobei.by/youtube)
+[![Tutorials on YouTube](https://cdn.ivanvorobei.io/github/readme/youtube-preview.jpg)](https://ivanvorobei.io/youtube)
