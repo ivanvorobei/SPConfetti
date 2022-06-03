@@ -45,7 +45,8 @@ public class SPConfetti {
     public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil) {
         shared.view.animation = animation
         shared.view.particles = particles
-        guard let window = window ?? UIApplication.shared.windows.first { $0.isKeyWindow } else { return }
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        guard let window = window ?? keyWindow else { return }
         if let superview = shared.view.superview, superview == window {
             superview.bringSubviewToFront(shared.view)
         } else {
