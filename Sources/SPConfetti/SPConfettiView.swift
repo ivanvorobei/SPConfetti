@@ -120,7 +120,7 @@ open class SPConfettiView: UIView {
             emitterLayer.emitterShape = CAEmitterLayerEmitterShape.point
         case .centerWidthToUp:
             emitterLayer.emitterShape = CAEmitterLayerEmitterShape.point
-        case .midScreenCenter:
+        case .centerExplosionToDown:
             emitterLayer.emitterShape = CAEmitterLayerEmitterShape.sphere
         }
         
@@ -195,9 +195,9 @@ open class SPConfettiView: UIView {
         case .centerWidthToUp:
             emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: frame.size.height + inset)
             emitterLayer?.emitterSize = CGSize(width: CGFloat.zero, height: .zero)
-        case .midScreenCenter:
+        case .centerExplosionToDown:
             emitterLayer?.emitterPosition = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
-            emitterLayer?.emitterSize = CGSize(width: CGFloat.zero, height: .zero)
+            emitterLayer?.emitterSize = CGSize(width: frame.size.width / 2, height: frame.size.width / 2)
         }
     }
     
@@ -232,11 +232,9 @@ open class SPConfettiView: UIView {
         case .centerWidthToUp:
             cell.emissionLongitude = degressToRadians(270)
             cell.emissionRange = degressToRadians(45)
-        case .midScreenCenter:
-            cell.emissionLongitude = degressToRadians(180)
+        case .centerExplosionToDown(let yAcceleration):
             cell.emissionRange = degressToRadians(360)
-            cell.emissionLongitude = degressToRadians(180)
-            
+            cell.yAcceleration = yAcceleration
         }
         var image = particle.image.resize(newWidth: particleWidth)
         if particlesConfig.colored {
