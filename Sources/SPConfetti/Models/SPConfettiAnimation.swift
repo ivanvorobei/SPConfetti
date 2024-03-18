@@ -30,6 +30,7 @@ public enum SPConfettiAnimation: CaseIterable {
     case fullWidthToUp
     case centerWidthToDown
     case centerWidthToUp
+    case midScreenCenter
     
     public var id: String {
         switch self {
@@ -37,6 +38,8 @@ public enum SPConfettiAnimation: CaseIterable {
         case .fullWidthToUp: return "fullWidthToUp"
         case .centerWidthToDown: return "centerWidthToDown"
         case .centerWidthToUp: return "centerWidthToUp"
+        case .midScreenCenter:
+            return "midScreenCenter"
         }
     }
     
@@ -46,6 +49,8 @@ public enum SPConfettiAnimation: CaseIterable {
         case .fullWidthToUp: return "Full Width to Up"
         case .centerWidthToDown: return "Center Width to Down"
         case .centerWidthToUp: return "Center Width to Up"
+        case .midScreenCenter:
+            return "Mid Screen Center"
         }
     }
 }
