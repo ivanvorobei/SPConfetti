@@ -25,11 +25,24 @@ import UIKit
  SPConfetti: Emitter position and direction styles.
  */
 public enum SPConfettiAnimation: CaseIterable {
+    public static var allCases: [SPConfettiAnimation] {
+        return [
+            .fullWidthToDown,
+            .fullWidthToUp,
+            .centerWidthToUp,
+            .centerWidthToDown,
+            .centerExplosionToDown(
+                yAcceleration: 0.0
+            )
+        ]
+    }
+    
     
     case fullWidthToDown
     case fullWidthToUp
     case centerWidthToDown
     case centerWidthToUp
+    case centerExplosionToDown(yAcceleration: CGFloat)
     
     public var id: String {
         switch self {
@@ -37,6 +50,8 @@ public enum SPConfettiAnimation: CaseIterable {
         case .fullWidthToUp: return "fullWidthToUp"
         case .centerWidthToDown: return "centerWidthToDown"
         case .centerWidthToUp: return "centerWidthToUp"
+        case .centerExplosionToDown:
+            return "centerExplosionToDown"
         }
     }
     
@@ -46,6 +61,8 @@ public enum SPConfettiAnimation: CaseIterable {
         case .fullWidthToUp: return "Full Width to Up"
         case .centerWidthToDown: return "Center Width to Down"
         case .centerWidthToUp: return "Center Width to Up"
+        case .centerExplosionToDown:
+            return "Center Mild Explosion to Down"
         }
     }
 }
