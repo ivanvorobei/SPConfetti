@@ -51,7 +51,7 @@ public class SPConfettiConfiguration {
      */
     public static var particlesConfig: SPConfettiParticlesConfig {
         get { shared.particlesConfig }
-        set { shared.particlesConfig = newValue }
+        set { shared.updateParticlesConfig(with: newValue) }
     }
 
     // MARK: - Internal
@@ -64,4 +64,9 @@ public class SPConfettiConfiguration {
     
     private static let shared = SPConfettiConfiguration()
     private init() {}
+    
+    // MARK: - Methods
+    private func updateParticlesConfig(with newConfig: SPConfettiParticlesConfig) {
+        particlesConfig = newConfig
+    }
 }
