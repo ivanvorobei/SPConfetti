@@ -33,6 +33,16 @@ public struct SPConfettiParticlesConfig {
     public var colored: Bool = true
     
     /**
+     SPConfetti: Style of particles. Can be custom image.
+     */
+    public var colors: [UIColor] = [.systemRed, .systemPink, .systemYellow, .systemTeal, .systemBlue, .systemGreen]
+    
+    /**
+     SPConfetti: The number of emitted objects created every second.
+     */
+    public var birthRate: Float = 24
+    
+    /**
      SPConfetti: The lifetime of the cell, in second.
      */
     public var lifetime: Float = 14
