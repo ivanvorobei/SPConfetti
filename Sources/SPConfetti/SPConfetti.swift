@@ -40,9 +40,10 @@ public class SPConfetti {
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
      - parameter window: The targe window. Use key window if `nil`.
+     - parameter colors: set the colors of the animation
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil) {
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil, colors: [UIColor], birthRate: Float) {
         shared.view.animation = animation
         shared.view.particles = particles
         let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
@@ -53,6 +54,8 @@ public class SPConfetti {
             window.addSubview(shared.view)
         }
         shared.view.frame = window.bounds
+        shared.view.colors = colors
+        shared.view.birthRate = birthRate
         shared.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         shared.view.startAnimating()
     }
@@ -64,10 +67,11 @@ public class SPConfetti {
      - parameter particles: Particles style. Can be custom image.
      - parameter duration: Automatically stop animation after this time interval.
      - parameter window: The targe window. Use key window if `nil`.
+     - parameter colors: set the colors of the animation
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, in window: UIWindow? = nil) {
-        startAnimating(animation, particles: particles, in: window)
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, in window: UIWindow? = nil, colors: [UIColor], birthRate: Float) {
+        startAnimating(animation, particles: particles, in: window, colors: colors, birthRate: birthRate)
         delay(duration, closure: {
             stopAnimating()
         })

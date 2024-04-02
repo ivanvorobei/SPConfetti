@@ -51,7 +51,22 @@ public class SPConfettiConfiguration {
      */
     public static var particlesConfig: SPConfettiParticlesConfig {
         get { shared.particlesConfig }
-        set { shared.updateParticlesConfig(with: newValue) }
+        set { shared.particlesConfig = newValue }
+    }
+    /**
+     SPConfetti: sets the colors of the animation
+     */
+    public static var colors: [UIColor] {
+        get { shared.colors }
+        set { shared.colors = newValue }
+    }
+    
+    /**
+     SPConfetti: The number of emitted objects created every second.
+     */
+    public static var birthRate: Float {
+        get { shared.birthRate }
+        set { shared.birthRate = newValue }
     }
 
     // MARK: - Internal
@@ -59,14 +74,10 @@ public class SPConfettiConfiguration {
     private var animation: SPConfettiAnimation = .fullWidthToDown
     private var particles: [SPConfettiParticle] = [.arc]
     private var particlesConfig = SPConfettiParticlesConfig()
-    
+    private var colors: [UIColor] = []
+    private var birthRate: Float = 24
     // MARK: - Singltone
     
     private static let shared = SPConfettiConfiguration()
     private init() {}
-    
-    // MARK: - Methods
-    private func updateParticlesConfig(with newConfig: SPConfettiParticlesConfig) {
-        particlesConfig = newConfig
-    }
 }

@@ -33,9 +33,11 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
     var animation: SPConfettiAnimation
     var particles: [SPConfettiParticle]
     var duration: TimeInterval?
+    var colors: [UIColor]
+    var birthRate: Float
     
     func makeUIView(context: Context) -> UnderlyingView {
-        UnderlyingView(isPresented: $isPresented)
+        UnderlyingView(isPresented: $isPresented, colors: colors, birthRate: birthRate)
     }
     
     func updateUIView(_ view: UnderlyingView, context: Context) {
@@ -43,6 +45,8 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
         view.particles = particles
         view.duration = duration
         view.particleConfig = context.environment.confettiParticlesConfiguration
+        view.colors = colors
+        view.birthRate = birthRate
         
         if isPresented && !view.isReleasesParticles {
             view.play()
@@ -60,15 +64,19 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
         var particles: [SPConfettiParticle] = []
         var duration: TimeInterval? = nil
         var particleConfig: SPConfettiParticlesConfig = .defaultValue
+        var colors: [UIColor] = []
+        var birthRate: Float = 24
         
         private(set) var isReleasesParticles: Bool
         
-        init(isPresented: Binding<Bool>) {
+        init(isPresented: Binding<Bool>, colors: [UIColor], birthRate: Float) {
             self.isPresented = isPresented
             isReleasesParticles = false
             super.init(frame: .zero)
             backgroundColor = .clear
             isUserInteractionEnabled = false
+            self.colors = colors
+            self.birthRate = birthRate
         }
         
         required init?(coder: NSCoder) {
@@ -84,7 +92,9 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
                 SPConfetti.startAnimating(animation,
                                           particles: particles,
                                           duration: duration,
-                                          in: self.window)
+                                          in: self.window,
+                                          colors: colors,
+                                          birthRate: birthRate)
                 
                 delay(duration) { [weak self] in
                     self?.stop()
@@ -92,7 +102,9 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
             } else {
                 SPConfetti.startAnimating(animation,
                                           particles: particles,
-                                          in: self.window)
+                                          in: self.window,
+                                          colors: colors,
+                                          birthRate: birthRate)
             }
         }
         
@@ -128,10 +140,11 @@ extension View {
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
      - parameter duration: Automatically stop animation after this time interval.
+     - parameter colors: set the colors of the animation
      */
-    public func confetti(isPresented: Binding<Bool>, animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval?) -> some View {
+    public func confetti(isPresented: Binding<Bool>, animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval?, colors: [UIColor], birthRate: Float) -> some View {
         self.background(
-            ConfettiPlaceholderView(isPresented: isPresented, animation: animation, particles: particles, duration: duration)
+            ConfettiPlaceholderView(isPresented: isPresented, animation: animation, particles: particles, duration: duration, colors: colors, birthRate: birthRate)
                 .allowsHitTesting(false)
         )
     }

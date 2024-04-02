@@ -60,11 +60,13 @@ open class SPConfettiView: UIView {
      
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
+     - parameter colors: set the colors of the animation
      */
-    public init(animation: SPConfettiAnimation, particles: [SPConfettiParticle]) {
+    public init(animation: SPConfettiAnimation, particles: [SPConfettiParticle], colors: [UIColor]) {
         super.init(frame: .zero)
         self.animation = animation
         self.particles = particles
+        self.colors = colors
         commomInit()
     }
     
@@ -101,6 +103,16 @@ open class SPConfettiView: UIView {
     public lazy var particlesConfig = SPConfettiConfiguration.particlesConfig
     
     /**
+     SPConfetti: sets the colors of the animation
+     */
+    public lazy var colors: [UIColor] = SPConfettiConfiguration.colors
+    
+    /**
+     SPConfetti: The number of emitted objects created every second.
+     */
+    public lazy var birthRate: Float = SPConfettiConfiguration.birthRate
+    
+    /**
      SPConfetti: Start animating with selected animation and particles style.
      */
     public func startAnimating() {
@@ -125,7 +137,7 @@ open class SPConfettiView: UIView {
         }
         
         emitterLayer.emitterCells = []
-        for color in particlesConfig.colors {
+        for color in colors {
             for particle in particles {
                 let cell = makeEmitterCell(particle: particle, color: color)
                 emitterLayer.emitterCells?.append(cell)
@@ -208,7 +220,7 @@ open class SPConfettiView: UIView {
      */
     private func makeEmitterCell(particle: SPConfettiParticle, color: UIColor) -> CAEmitterCell {
         let cell = CAEmitterCell()
-        cell.birthRate = particlesConfig.birthRate / Float(particlesConfig.colors.count) / Float(particles.count)
+        cell.birthRate = birthRate / Float(colors.count) / Float(particles.count)
         cell.lifetime = particlesConfig.lifetime
         cell.lifetimeRange = .zero
         cell.velocity = particlesConfig.velocity
