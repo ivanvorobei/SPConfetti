@@ -130,12 +130,7 @@ extension View {
      - parameter particles: Particles style. Can be custom image.
      - parameter duration: Automatically stop animation after this time interval.
      */
-//    public func confetti(isPresented: Binding<Bool>, animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval?, colors: [UIColor], birthRate: Float) -> some View {
-//        self.background(
-//            ConfettiPlaceholderView(isPresented: isPresented, animation: animation, particles: particles, duration: duration, colors: colors, birthRate: birthRate)
-//                .allowsHitTesting(false)
-//        )
-//    }
+    
     public func confetti(isPresented: Binding<Bool>, animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval?) -> some View {
         self.background(
             ConfettiPlaceholderView(isPresented: isPresented, animation: animation, particles: particles, duration: duration)
