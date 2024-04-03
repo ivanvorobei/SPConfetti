@@ -84,16 +84,16 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
                 SPConfetti.startAnimating(animation,
                                           particles: particles,
                                           duration: duration,
-                                          in: self.window,
-                                          particlesConfig: particleConfig)
+                                          particlesConfig: particleConfig,
+                                          in: self.window)
                 delay(duration) { [weak self] in
                     self?.stop()
                 }
             } else {
                 SPConfetti.startAnimating(animation,
                                           particles: particles,
-                                          in: self.window,
-                                          particlesConfig: particleConfig)
+                                          particlesConfig: particleConfig,
+                                          in: self.window)
             }
         }
         

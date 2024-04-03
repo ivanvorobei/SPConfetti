@@ -43,7 +43,7 @@ public class SPConfetti {
      - parameter particlesConfig: The configuration for the particles, colors, velocity, spin, etc.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil, particlesConfig: SPConfettiParticlesConfig) {
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], particlesConfig: SPConfettiParticlesConfig, in window: UIWindow? = nil) {
         shared.view.animation = animation
         shared.view.particles = particles
         let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
@@ -69,8 +69,8 @@ public class SPConfetti {
      - parameter particlesConfig: The configuration for the particles, colors, velocity, spin, etc.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, in window: UIWindow? = nil, particlesConfig: SPConfettiParticlesConfig) {
-        startAnimating(animation, particles: particles, in: window, particlesConfig: particlesConfig)
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, particlesConfig: SPConfettiParticlesConfig, in window: UIWindow? = nil) {
+        startAnimating(animation, particles: particles, particlesConfig: particlesConfig, in: window)
         delay(duration, closure: {
             stopAnimating()
         })
