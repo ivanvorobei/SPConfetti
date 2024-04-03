@@ -84,14 +84,15 @@ struct ConfettiPlaceholderView: UIViewRepresentable {
                 SPConfetti.startAnimating(animation,
                                           particles: particles,
                                           duration: duration,
+                                          particlesConfig: particleConfig,
                                           in: self.window)
-                
                 delay(duration) { [weak self] in
                     self?.stop()
                 }
             } else {
                 SPConfetti.startAnimating(animation,
                                           particles: particles,
+                                          particlesConfig: particleConfig,
                                           in: self.window)
             }
         }
@@ -129,6 +130,7 @@ extension View {
      - parameter particles: Particles style. Can be custom image.
      - parameter duration: Automatically stop animation after this time interval.
      */
+    
     public func confetti(isPresented: Binding<Bool>, animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval?) -> some View {
         self.background(
             ConfettiPlaceholderView(isPresented: isPresented, animation: animation, particles: particles, duration: duration)
