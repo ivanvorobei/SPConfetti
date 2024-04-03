@@ -40,9 +40,10 @@ public class SPConfetti {
      - parameter animation: Kind of animation, position and direction of particles.
      - parameter particles: Particles style. Can be custom image.
      - parameter window: The targe window. Use key window if `nil`.
+     - parameter particlesConfig: The configuration for the particles, colors, velocity, spin, etc.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil, config: SPConfettiParticlesConfig) {
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], in window: UIWindow? = nil, particlesConfig: SPConfettiParticlesConfig) {
         shared.view.animation = animation
         shared.view.particles = particles
         let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
@@ -53,7 +54,7 @@ public class SPConfetti {
             window.addSubview(shared.view)
         }
         shared.view.frame = window.bounds
-        shared.view.particlesConfig = config
+        shared.view.particlesConfig = particlesConfig
         shared.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         shared.view.startAnimating()
     }
@@ -65,10 +66,11 @@ public class SPConfetti {
      - parameter particles: Particles style. Can be custom image.
      - parameter duration: Automatically stop animation after this time interval.
      - parameter window: The targe window. Use key window if `nil`.
+     - parameter particlesConfig: The configuration for the particles, colors, velocity, spin, etc.
      */
     @available(iOSApplicationExtension, unavailable)
-    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, in window: UIWindow? = nil, config: SPConfettiParticlesConfig) {
-        startAnimating(animation, particles: particles, in: window, config: config)
+    public static func startAnimating(_ animation: SPConfettiAnimation, particles: [SPConfettiParticle], duration: TimeInterval, in window: UIWindow? = nil, particlesConfig: SPConfettiParticlesConfig) {
+        startAnimating(animation, particles: particles, in: window, particlesConfig: particlesConfig)
         delay(duration, closure: {
             stopAnimating()
         })
