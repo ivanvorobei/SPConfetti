@@ -239,7 +239,6 @@ open class SPConfettiView: UIView {
         var image = particle.image.resize(newWidth: particleWidth)
         if particlesConfig.colored {
             image = image.colored(color)
-            cell.color = color.cgColor
         }
         cell.contents = image.cgImage
         
